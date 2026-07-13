@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>You Got A Friend</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+
+<body>
+
+<div id="cover">
+
+   <div class="envelope">
+
+    <div class="flap"></div>
+
+    <div class="seal">💌</div>
+
+    <h1>A Little Letter</h1>
+
+    <h2>For Chocolate Drop</h2>
+
+    <div class="divider"></div>
+
+    <p>
+        Just a little something to remind you
+        that someone is thinking about you today.
+    </p>
+
+    <button class="openButton" onclick="openCard()">
+        Open Your Letter 💖
+    </button>
+
+    <p class="signature">
+        Made with lots of care, just for you.
+    </p>
+
+</div>
+
+</div>
+
+<img class="flower flower1" src="images/flower.png">
+
+<img class="flower flower2" src="images/flower.png">
+
+<span class="sparkle sparkle1">✨</span>
+<span class="sparkle sparkle2">✦</span>
+<span class="sparkle sparkle3">✨</span>
+<span class="sparkle sparkle4">✧</span>
+
+<div class="card">
+
+
+    <div class="page page1">
+
+        <img class="bow" src="images/bow.png">
+
+        <h1>🌸 Welcome, Chocolate Drop! 🌸</h1>
+
+        <p>I made something just for you.</p>
+
+        <button onclick="nextPage()">➜</button>
+
+    </div>
+
+
+    <div class="page page2">
+
+        <h1>💌 A little message 💌</h1>
+
+        <p>
+        I made this page because I wanted
+        a way to check in on you.
+        </p>
+
+        <button onclick="nextPage()">➜</button>
+
+    </div>
+    <div class="page page3">
+
+    <h1>🌸 How are you feeling today? 🌸</h1>
+
+
+    <div class="emotions">
+
+    <span data-feeling="Angry">😠</span>
+    <span data-feeling="Irritated">😒</span>
+    <span data-feeling="Sad">😢</span>
+    <span data-feeling="Sick">🤒</span>
+    <span data-feeling="Normal">😐</span>
+    <span data-feeling="Okay">🙂</span>
+    <span data-feeling="Excited">🤩</span>
+    <span data-feeling="Happy">😄</span>
+
+    </div>
+
+
+    <input 
+    type="range"
+    min="1"
+    max="8"
+    value="6"
+    class="slider"
+    id="feelingSlider">
+
+    <p id="feelingText">
+    I'm feeling: Okay
+    </p>
+
+    <p id="feelingMessage"></p>
+
+    <button onclick="nextPage()">➜</button>
+    </div>
+
+    <div class="page page4">
+
+    <h1>💬 Do you want to talk about it?</h1>
+
+
+    <button onclick="talkYes()">
+        💖 Yes
+    </button>
+
+
+    <button id="noButton" onclick="moveNoButton()">
+    😌 No
+    </button>
+
+
+    <p id="noMessage"></p>
+
+    </div>
+
+    <div class="page page5">
+
+        <div class="letter">
+
+        <h1>💌 A little note for you 💌</h1>
+
+        <p>
+            Whatever you're feeling today,
+            I'm really glad you took a moment
+            to check in.
+        </p>
+
+        <p>
+            Remember that you never have to
+            handle everything by yourself.
+        </p>
+
+        <p>
+            Whether you need someone to listen,
+            someone to laugh with,
+            or just someone nearby...
+            I'm here. 🌸
+        </p>
+
+        <p>
+            I hope today gives you at least
+            one little reason to smile.
+        </p>
+
+        <button class="heartButton" onclick="showHeart()">
+            💖
+            <span>
+                Open my heart
+            </span>
+        </button>
+
+    </div>
+
+</div>
+
+<div class="hearts"></div>
+
+<div id="endingPage">
+
+    <button class="restartButton" onclick="restartPage()">
+    🌸 Read again
+    </button>
+
+    <img class="endingFlower flowerLeft"
+         src="images/flower.png">
+
+    <img class="endingFlower flowerRight"
+         src="images/flower.png">
+
+    <span class="endingSparkle sparkleA">✨</span>
+    <span class="endingSparkle sparkleB">✦</span>
+    <span class="endingSparkle sparkleC">✨</span>
+
+    <div class="finalCard">
+
+        <img class="endingBow" src="images/bow.png">
+
+        <h1 id="loveLine"></h1>
+
+        <div class="endingDivider"></div>
+
+        <div id="signature"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
