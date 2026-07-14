@@ -819,6 +819,8 @@ p{
 
     opacity:0;
 
+    padding:20px;
+
     transition:opacity 2.5s ease;
 
     flex-direction:column;
@@ -1333,6 +1335,199 @@ p{
     .endingBow{
 
         width:80px;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    *{
+        box-sizing:border-box;
+    }
+
+
+    body{
+        overflow-x:hidden;
+        width:100%;
+    }
+
+
+    .card{
+
+        width:90vw;
+        max-width:90vw;
+
+        padding:25px 15px;
+
+    }
+
+
+    .page{
+
+        width:100%;
+
+    }
+
+
+    .page h1{
+
+        font-size:28px;
+
+    }
+
+
+    .page p{
+
+        font-size:16px;
+
+    }
+
+
+    .letter{
+
+        width:100%;
+
+    }
+
+
+    .finalCard{
+
+        width:90vw;
+        max-width:90vw;
+
+        padding:30px 15px;
+
+    }
+
+
+    #loveLine{
+
+        font-size:38px;
+
+    }
+
+
+    #signature{
+
+        font-size:20px;
+
+    }
+
+
+    .endingBow{
+
+        max-width:100px;
+
+    }
+
+
+    .restartButton{
+
+        width:140px;
+        height:45px;
+
+        font-size:15px;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    body{
+        height:auto;
+        min-height:100vh;
+        overflow-x:hidden;
+    }
+
+
+    .card{
+
+        width:92vw;
+        padding:20px 15px;
+
+    }
+
+
+    .page h1{
+
+        font-size:26px;
+
+    }
+
+
+    .page p{
+
+        font-size:15px;
+
+    }
+
+
+    .letter{
+
+        padding:15px;
+
+    }
+
+
+    .heartButton{
+
+        width:150px;
+        height:75px;
+        font-size:25px;
+
+    }
+
+
+    #endingPage{
+
+        padding:10px;
+
+    }
+
+
+    .finalCard{
+
+        width:92vw;
+        padding:25px 15px;
+
+    }
+
+
+    #loveLine{
+
+        font-size:34px;
+
+    }
+
+
+    #signature{
+
+        font-size:18px;
+
+    }
+
+
+    .endingDivider{
+
+        width:120px;
+        margin:20px auto;
+
+    }
+
+
+    .restartButton{
+
+        width:130px;
+        height:45px;
+
+    }
+
+
+    .endingFlower{
+
+        width:70px;
 
     }
 
