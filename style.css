@@ -1251,3 +1251,89 @@ p{
     }
 
 }
+
+@media (max-width: 600px){
+
+    .card{
+
+        width:85%;
+        padding:30px 20px;
+
+        border-radius:25px;
+
+    }
+
+
+    .card h1{
+
+        font-size:32px;
+
+    }
+
+
+    .card p{
+
+        font-size:16px;
+
+    }
+
+
+    .letter{
+
+        font-size:16px;
+
+    }
+
+
+    .heartButton{
+
+        width:160px;
+        height:50px;
+        font-size:16px;
+
+    }
+
+
+    .finalCard{
+
+        width:85%;
+
+        padding:35px 20px;
+
+        border-radius:25px;
+
+    }
+
+
+    #loveLine{
+
+        font-size:42px;
+
+    }
+
+
+    #signature{
+
+        font-size:22px;
+
+        margin-top:25px;
+
+    }
+
+
+    .restartButton{
+
+        width:150px;
+        height:50px;
+        font-size:16px;
+
+    }
+
+
+    .endingBow{
+
+        width:80px;
+
+    }
+
+}
