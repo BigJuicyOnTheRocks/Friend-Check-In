@@ -145,7 +145,6 @@ function createHeart(){
 
     document.body.appendChild(heart);
 
-
     setTimeout(function(){
 
         heart.remove();
@@ -153,7 +152,6 @@ function createHeart(){
     },6000);
 
 }
-
 
 setInterval(createHeart,1800);
 
@@ -197,7 +195,7 @@ function showHeart(){
 
 function createHeartCurtain(){
 
-    for(let i = 0; i < 500; i++){
+    for(let i = 0; i < 400; i++){
 
         let heart = document.createElement("span");
 
@@ -245,10 +243,17 @@ function createHeartCurtain(){
 
     }
 
-
     setTimeout(function(){
 
-        startEndingReveal();
+    // Fade every heart away
+    document.querySelectorAll(".curtainHeart").forEach(function(heart){
+
+        heart.style.transition = "opacity 2s ease";
+        heart.style.opacity = "0";
+
+    });
+
+    startEndingReveal();
 
     },3500);
 
@@ -256,62 +261,46 @@ function createHeartCurtain(){
 
 function startEndingReveal(){
 
-    let card = document.querySelector(".card");
+    let ending = document.getElementById("endingPage");
+    let finalCard = document.querySelector(".finalCard");
 
-    card.style.transition =
-    "opacity 1.5s ease";
+    ending.style.display = "flex";
 
-    card.style.opacity="0";
+    setTimeout(function(){
+
+        ending.style.opacity = "1";
+
+        finalCard.style.transform = "translateY(0)";
+        finalCard.style.opacity = "1";
+
+    },200);
+
+
+    let love = document.getElementById("loveLine");
+    let sig = document.getElementById("signature");
 
 
     setTimeout(function(){
 
-        card.style.display="none";
+        love.innerHTML = "I love you.";
+        love.style.opacity = "1";
+
+    },2200);
 
 
-        let ending =
-        document.getElementById("endingPage");
+    setTimeout(function(){
 
+        sig.innerHTML = "Much Love,<br>Ashtray 🌸";
+        sig.style.opacity = "1";
 
-        ending.style.display="flex";
+    },3300);
 
-        setTimeout(function(){
+    setTimeout(function(){
 
-            ending.style.opacity="1";
-
-        }, 50);
-
-        let love =
-        document.getElementById("loveLine");
-
-
-        let sig =
-        document.getElementById("signature");
-
-
-        setTimeout(function(){
-
-            love.innerHTML =
-            "I love you ❤️";
-
-            love.style.opacity="1";
-
-        },500);
-
-
-
-        setTimeout(function(){
-
-            sig.innerHTML =
-            "Much Love,<br>Ashley 🌸";
-
-            sig.style.opacity="1";
-
-        },2000);
-
-
-    },1500);
-
+        finalCard.style.animation=
+            "floatCard 4s ease-in-out infinite";
+        
+    },2200);
 }
 
 function openCard(){
@@ -346,5 +335,4 @@ function openCard(){
 function restartPage(){
 
     location.reload();
-
 }
