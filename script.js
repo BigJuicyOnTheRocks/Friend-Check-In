@@ -282,7 +282,7 @@ function startEndingReveal(){
 
     setTimeout(function(){
 
-        love.innerHTML = "I love you.";
+        love.innerHTML = "I Love You!";
         love.style.opacity = "1";
 
     },2200);
