@@ -819,7 +819,7 @@ p{
 
     opacity:0;
 
-    transition:opacity 1s ease;
+    transition:opacity 2.5s ease;
 
     flex-direction:column;
 
@@ -903,6 +903,8 @@ p{
 
     animation:fallHeart 7s linear forwards;
 
+    transition:opacity 1s ease;
+
 }
 
 
@@ -961,6 +963,45 @@ p{
     position:relative;
 
     z-index:5;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    /*your existing styles*/
+
+    transform: translateY(120px);
+    opacity: 0;
+
+    transition:
+        transform 2s ease,
+        opacity 2s ease;
+
+}
+
+#loveLine{
+
+    display:block;
+
+    color:#C76B98;
+
+    opacity:0;
+
+}
+
+#signature{
+
+    display:block;
+
+    color:#A56A84;
+
+    opacity:0;
 
 }
 
@@ -1106,7 +1147,23 @@ p{
 
     font-size:18px;
 
-    margin-top:40px;
+    margin-top:35px;
+
+    background: #FFF0F6;
+
+    border:2px solid #D4AF37;
+
+    color:#C76B98;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.restartButton:hover{
+
+    transform:scale(1.05);
 
 }
 
@@ -1114,5 +1171,83 @@ p{
 
     margin-left:auto;
     margin-right:auto;
+
+}
+
+@media (max-width: 600px){
+
+    .card{
+        width:90%;
+        padding:25px;
+    }
+
+
+    h1{
+        font-size:30px;
+    }
+
+
+    p{
+        font-size:18px;
+    }
+
+
+    .envelope{
+        width:85%;
+        padding:30px;
+    }
+
+
+    .emotions{
+        font-size:28px;
+    }
+
+
+    .flower{
+        width:50px;
+    }
+
+
+    .sparkle{
+        font-size:22px;
+    }
+
+
+    .letter{
+        padding:20px;
+    }
+
+
+    #loveLine{
+        font-size:45px;
+    }
+
+
+    #signature{
+        font-size:24px;
+    }
+
+}
+
+#loveLine,
+#signature{
+
+    display:block;
+
+}
+
+@keyframes floatCard{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
 
 }
