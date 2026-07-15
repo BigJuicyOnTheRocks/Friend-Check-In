@@ -111,6 +111,14 @@ function talkYes(){
 
 }
 
+function continueToLetter(){
+
+    document.querySelector(".page4").style.display = "none";
+
+    document.querySelector(".page5").style.display = "block";
+
+}
+
 let noClicks = 0;
 
 function moveNoButton() {
@@ -148,7 +156,7 @@ function moveNoButton() {
 
         sendCheckIn("No");
         
-        talkYes();
+        continueToLetter();
 
     },5800);
 
