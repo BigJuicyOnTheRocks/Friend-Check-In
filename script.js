@@ -1,6 +1,6 @@
 let currentPage = 1;
 
-const sheetURL = "PASTE_YOUR_URL_HERE";
+const sheetURL = "https://script.google.com/macros/s/AKfycbx-SOF4l1gVRx0lPX9bMdqG7u5f0PQySj_SlU8TtjvklqqUIti23C9eyMbbDbUW-sUH/exec";
 
 let currentFeeling = "Okay";
 
