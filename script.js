@@ -1,5 +1,8 @@
 let currentPage = 1;
 
+const sheetURL = "PASTE_YOUR_URL_HERE";
+
+let currentFeeling = "Okay";
 
 function nextPage(){
 
@@ -42,6 +45,8 @@ function updateFeeling() {
     let selectedEmoji = emotions[slider.value - 1];
 
     selectedEmoji.classList.add("selected");
+
+    currentFeeling = selectedEmoji.dataset.feeling;
 
     feelingText.innerHTML =
         "I'm Feeling: " + selectedEmoji.dataset.feeling;
@@ -98,6 +103,8 @@ updateFeeling();
 
 function talkYes(){
 
+    sendCheckIn("Yes");
+   
     document.querySelector(".page4").style.display = "none";
 
     document.querySelector(".page5").style.display = "block";
@@ -139,9 +146,11 @@ function moveNoButton() {
 
     setTimeout(function(){
 
+        sendCheckIn("No");
+        
         talkYes();
 
-    },8000);
+    },5800);
 
 }
 
@@ -353,4 +362,22 @@ function openCard(){
 function restartPage(){
 
     location.reload();
+}
+
+function sendCheckIn(talkAnswer){
+
+    fetch(sheetURL, {
+
+        method:"POST",
+
+        body: JSON.stringify({
+
+            feeling: currentFeeling,
+
+            talk: talkAnswer
+
+        })
+
+    });
+
 }
