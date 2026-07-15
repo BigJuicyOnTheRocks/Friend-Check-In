@@ -1532,3 +1532,11 @@ p{
     }
 
 }
+
+.page4 button{
+
+    transition:
+        opacity 2s ease,
+        transform 2s ease;
+
+}
