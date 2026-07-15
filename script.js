@@ -44,7 +44,7 @@ function updateFeeling() {
     selectedEmoji.classList.add("selected");
 
     feelingText.innerHTML =
-        "I'm feeling: " + selectedEmoji.dataset.feeling;
+        "I'm Feeling: " + selectedEmoji.dataset.feeling;
 
     switch(selectedEmoji.dataset.feeling){
 
@@ -120,12 +120,30 @@ function moveNoButton() {
 
     } else {
 
-        document.getElementById("noMessage").innerHTML =
-            "😤 Oh okay...but if I was...Just kidding! I'm here whenever you need me.";
+    document.getElementById("noMessage").innerHTML =
+        "😌 Oh okay... but if I was... just kidding! 😆<br><br>Just remember I'm always here if you ever want to talk. 💖";
+
+    noButton.style.opacity = "0";
+
+    let yesButton =
+        document.querySelector(".page4 button");
+
+    yesButton.style.opacity = "0";
+
+    setTimeout(function(){
 
         noButton.style.display = "none";
+        yesButton.style.display = "none";
 
-    }
+    },1000);
+
+    setTimeout(function(){
+
+        talkYes();
+
+    },8000);
+
+}
 
 }
 
@@ -138,7 +156,7 @@ function createHeart(){
     heart.classList.add("heart");
 
     heart.style.left =
-    Math.random() * 100 + "vw";
+    (-4 + Math.random() * 108) + "vw";
 
     heart.style.animationDuration =
     (3 + Math.random() * 3) + "s";
@@ -217,7 +235,7 @@ function createHeartCurtain(){
 
 
         heart.style.left =
-        Math.random()*100 + "vw";
+        (-4 + Math.random() * 108) + "vw";
 
 
         heart.style.top =
@@ -229,7 +247,7 @@ function createHeartCurtain(){
 
 
         heart.style.fontSize =
-        (15 + Math.random()*45)+"px";
+        (20 + Math.random()*35)+"px";
 
 
         document.body.appendChild(heart);
